@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static', static_folder='static')
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 @app.route('/')
