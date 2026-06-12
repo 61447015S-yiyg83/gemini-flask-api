@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini 分散式微服務</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="header">
+        分散式系統期末專題 - Gemini 服務節點
+        <button id="theme-toggle" onclick="toggleTheme()" style="float:right; font-size:12px; padding:5px 10px; border-radius:8px;">切換深色模式</button>
+    </div>
+    <div id="chat-box"></div>
+    <div class="input-area">
+        <input type="text" id="message-input" placeholder="請輸入訊息..." onkeypress="handleKeyPress(event)">
+        <button onclick="sendMessage()">發送</button>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
